@@ -1,0 +1,5 @@
+자바 스크립트의 비동기 처리패턴
+1. callback
+2. promise
+3. promise + genertor
+4. async & await
