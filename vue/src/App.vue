@@ -1,39 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <hello-world></hello-world>
-    <HelloWorld></HelloWorld>
-    <HelloWorld />
+  <div>
+    <app-header></app-header>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import AppHeader from './components/AppHeader.vue';
 
-var appContent = {
-  props: ['propsdata'],
-};
+// var AppHeader = {
+//   template 
+// }
+  // new Vue({
+  //   data: {
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    'hello-world': HelloWorld,
-    props: {
-      msg: String,
-    },
-  },
-};
+  //   }
+  // })
+
+  export default {
+  components: { AppHeader },
+    data: function {
+      return {
+        str : 'hi'
+      }
+    }
+    components {
+      'app-header': AppHeader
+    }
+  }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
