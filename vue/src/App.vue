@@ -1,11 +1,13 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header
+    v-bind:propsdata="str"
+    v-on:renew="renewStr"></app-header>
   </div>
 </template>
 
 <script>
-import AppHeader from './components/AppHeader.vue';
+import AppHeader from '.\components\AppHeader.vue';
 
 // var AppHeader = {
 //   template 
@@ -17,14 +19,18 @@ import AppHeader from './components/AppHeader.vue';
   // })
 
   export default {
-  components: { AppHeader },
-    data: function {
+    data: function () {
       return {
-        str : 'hi'
+        str : 'Header'
       }
-    }
-    components {
+    },
+    components: {
       'app-header': AppHeader
+    },
+    methods: {
+      renewStr: function() {
+        this.str = 'hi'
+      }
     }
   }
 </script>
